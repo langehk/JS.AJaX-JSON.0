@@ -1,6 +1,6 @@
 "use strict";
-import {$} from "./modules/nQuery.js";
-import {Ajax} from "./modules/Ajax.js";
+import {$} from "../modules/nQuery.js";
+import {Ajax} from "../modules/ajax.js";
 
 /*
  * Event handler for fortune button - tests responseText
