@@ -1,0 +1,32 @@
+﻿[
+    {
+        "firstname": "Morten",
+        "lastname": "Due",
+        "emailaddress": "tooCool4School@gmail.com",
+        "birthdate": "16-04-98"
+    },
+    {
+        "firstname": "Christian Harske",
+        "lastname": "Ehlers",
+        "emailaddress": "harskemanden@waoomail.dk",
+        "birthdate": "every year"
+    },
+    {
+        "firstname": "Ole",
+        "lastname": "Hansson",
+        "emailaddress": "OH@yahoo.pl",
+        "birthdate": "2013-10-21"
+    },
+    {
+        "firstname": "Niels'",
+        "lastname": "kat",
+        "emailaddress": "kittykat@hotmail.com",
+        "birthdate": "10-12-10"
+    },
+    {
+        "firstname": "Nadia",
+        "lastname": "Skau",
+        "emailaddress": "nadiaskau@hotmail.com",
+        "birthdate": "02-07-90"
+    }
+]

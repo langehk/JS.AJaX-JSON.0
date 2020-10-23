@@ -2,20 +2,7 @@
 import {$} from "../modules/nQuery.js";
 import {Ajax} from "../modules/ajax.js";
 
-/*
- * Event handler for fortune button - tests responseText
- */
-let getNewContent = function() {
-    let req = Object.create(Ajax);
-    req.init();
-    req.getFile("examplejson2g.json", txtHandler);
-}
 
-/*
- * readystatechange/load event handler 
- * aka callback function
- * for the above AJaX
- */
 let txtHandler = function(e) {
     /* ajax load event
      * puts received text 
@@ -25,11 +12,31 @@ let txtHandler = function(e) {
 
     let obj = JSON.parse(e.target.responseText);    // objectify response
                                                     // and use it
-    let txt = document.createTextNode(`Byen ${obj[1].name} har ${obj[1].population} indbyggere`);
-    let p = document.createElement("p");
-    p.appendChild(txt);
-    $("new").appendChild(p);
+
+    let table = document.createElement("table"); 
+
+    for (let i = 0; i < obj.length; i++) {
+    
+        let row = document.createElement("tr");
+        let td = document.createElement("td");
+        let txt = document.createTextNode(`${obj[i].name} - ${obj[i].population}`);
+        
+        td.appendChild(txt); 
+        td.style.border = "1px solid black";
+        row.appendChild(td);
+        table.appendChild(row);
+        
+        
+    }
+    
+    table.style.border = "1px solid black";
+    
+    $("new").appendChild(table);
+
+
 }
+
+getNewContent("../data/examplejson2g.json", txtHandler); //hent JSON fil
 
 /*
  *  Listen to the button

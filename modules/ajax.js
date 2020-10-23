@@ -32,4 +32,11 @@ let Ajax = {
     }
 }
 
-export {Ajax};
+let getNewContent = function(filename, handler) {
+    let req = Object.create(Ajax);
+    req.init();
+    req.getFile(filename, handler);
+}
+
+
+export {Ajax, getNewContent};
