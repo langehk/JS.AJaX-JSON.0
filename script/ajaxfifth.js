@@ -1,6 +1,6 @@
 "use strict";
 import {$} from "../modules/nQuery.js";
-import {Ajax} from "../modules/ajax.js";
+import {Ajax, getNewContent} from "../modules/ajax.js";
 
 
 let txtHandler = function(e) {
@@ -36,13 +36,13 @@ let txtHandler = function(e) {
 
 }
 
-getNewContent("../data/examplejson2g.json", txtHandler); //hent JSON fil
-
 /*
  *  Listen to the button
  */
 let showStarter = function () {
-    $("fortune").addEventListener("click", getNewContent);
+    $("fortune").addEventListener("click", function() {
+        getNewContent("../data/examplejson2g.json", txtHandler);
+    });
 }
 
 window.addEventListener("load", showStarter);                   // kick off JS
